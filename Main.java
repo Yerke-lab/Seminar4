@@ -9,7 +9,7 @@ public class Main {
         }
 
         Team <Archer> team2 = new Team<>();
-        team2.addWarriorToTeam(new Archer("Kolya", 150, new Bow(100, 50), new Guard(0)))
+        team2.addWarriorToTeam(new Archer("Kolya", 150, new Bow(100, 50), new Guard(5)))
                 .addWarriorToTeam(new Archer("Paul", 200, new Bow(75, 70), new Guard(25)));
 
         for (Archer person : team2) {
@@ -18,5 +18,7 @@ public class Main {
 
         System.out.println(team1.maxTeamRange());
         System.out.println(team2.maxTeamRange());
+        System.out.println(team1.minTeamAttackReflection());
+        System.out.println(team2.minTeamAttackReflection());
     }
 }
