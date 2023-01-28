@@ -5,8 +5,10 @@ public class Guard extends Protection {
     
     public Guard(int attackDefense) {
             super(attackDefense);
-            
-        }
+    }
+    public int getAttackReflection() {
+        return attackReflection;
+    }
 
     @Override
     public int reflection() {
