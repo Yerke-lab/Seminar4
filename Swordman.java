@@ -8,4 +8,8 @@ public class Swordman extends Warrior {
     public String toString() {
         return "Swordman, " + super.toString();
     }
+    public int minAttackReflection() {
+        return ((Guard) getProtection()).getAttackReflection();
+    }
+    
 }
