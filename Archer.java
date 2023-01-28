@@ -12,4 +12,7 @@ public class Archer extends Warrior {
         public int shotRange() {
             return ((Bow) getWeapon()).getRange();
         }
+        public int minAttackReflection() {
+            return ((Guard) getProtection()).getAttackReflection();
+        }
 }
