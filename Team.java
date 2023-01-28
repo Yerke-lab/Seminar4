@@ -24,4 +24,17 @@ public class Team <E extends Warrior> implements Iterable<E>{
         }
         return maxRange;
     }
+    //Добавить метод определения минимального щита в команде.
+    public int minTeamAttackReflection() {
+        int minGuard = 100;
+        for (E item : team) {
+            if(item instanceof Swordman) {
+                if(((Swordman)item).minAttackReflection() < minGuard) minGuard = ((Swordman)item).minAttackReflection();
+            }
+            if(item instanceof Archer) {
+                if(((Archer)item).minAttackReflection() < minGuard) minGuard = ((Archer)item).minAttackReflection();
+            } 
+        }
+        return minGuard;
+    }
 }
